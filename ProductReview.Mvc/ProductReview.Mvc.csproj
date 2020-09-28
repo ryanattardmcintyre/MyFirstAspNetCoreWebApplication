@@ -21,7 +21,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\ProductReview.Data\ProductReview.DataAccess.csproj" />
+    <ProjectReference Include="..\ProductReview.IoC\ProductReview.IoC.csproj" />
   </ItemGroup>
 
 </Project>

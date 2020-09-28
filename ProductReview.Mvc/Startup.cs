@@ -13,6 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProductReview.DataAccess.Context;
+using ProductReview.IoC;
+using ProductReview.DataAccess.Repositories;
 
 namespace ProductReview.Mvc
 {
@@ -41,6 +43,9 @@ namespace ProductReview.Mvc
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+          
+            DependencyContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
