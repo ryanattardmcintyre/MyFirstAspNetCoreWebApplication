@@ -20,7 +20,7 @@ namespace ProductReview.Mvc.Controllers
         {
             var list = productService.GetProducts();
 
-            return View();
+            return View(list);
         }
     }
 }

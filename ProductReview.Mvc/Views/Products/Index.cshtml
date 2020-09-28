@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ProductReview.Application.ViewModels.ProductViewModel> 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,17 @@
 
 <h1>Index</h1>
 
+<div class="container body-content">
+    <div class="row product-content">
+        @foreach (var p in Model)
+        {
+            <div class="product-image-container">
+                <span>@p.Name</span>
+                <span>@p.Price</span>
+                </div>
+                }
+
+            </div>
+        </div>
+
+ 
