@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CFAA758A-1F2E-41D9-88FC-1A0396A5D76D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReview.Application", "ProductReview.Application\ProductReview.Application.csproj", "{0F4EF6CA-9470-4226-9721-0650E1B119B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductReview.Application", "ProductReview.Application\ProductReview.Application.csproj", "{0F4EF6CA-9470-4226-9721-0650E1B119B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReview.Data", "ProductReview.Data\ProductReview.Data.csproj", "{2CE07D74-3A4B-4FCC-B8FB-49905A1A10F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductReview.DataAccess", "ProductReview.Data\ProductReview.DataAccess.csproj", "{2CE07D74-3A4B-4FCC-B8FB-49905A1A10F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReview.Domain", "ProductReview.Domain\ProductReview.Domain.csproj", "{9AF14D2C-A844-4395-8EF5-4BC6CE2B5768}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductReview.Domain", "ProductReview.Domain\ProductReview.Domain.csproj", "{9AF14D2C-A844-4395-8EF5-4BC6CE2B5768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReview.IoC", "ProductReview.IoC\ProductReview.IoC.csproj", "{7E23A12C-B229-4BA6-9ADE-8CC310C7CB83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductReview.IoC", "ProductReview.IoC\ProductReview.IoC.csproj", "{7E23A12C-B229-4BA6-9ADE-8CC310C7CB83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReview.Mvc", "ProductReview.Mvc\ProductReview.Mvc.csproj", "{EFB74874-1A90-46AB-89B6-998AC0E0F3F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductReview.Mvc", "ProductReview.Mvc\ProductReview.Mvc.csproj", "{EFB74874-1A90-46AB-89B6-998AC0E0F3F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
