@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\ProductReview.Domain\ProductReview.Domain.csproj" />
   </ItemGroup>
 
 </Project>
