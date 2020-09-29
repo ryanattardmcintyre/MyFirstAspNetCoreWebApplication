@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProductReview.Mvc.Models;
@@ -20,6 +21,7 @@ namespace ProductReview.Mvc.Controllers
 
         public IActionResult Index()
         {
+          //  throw new Exception("error");
             return View();
         }
 
@@ -29,9 +31,12 @@ namespace ProductReview.Mvc.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error([Bind(Prefix = "id")] int statusCode = 0)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var error = HttpContext.Features.Get<IExceptionHandlerFeature>();
+
+        
+            return View( );
         }
     }
 }

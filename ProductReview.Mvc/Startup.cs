@@ -62,6 +62,11 @@ namespace ProductReview.Mvc
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            // app.Run(context => { throw new Exception("error"); });
+            app.UseStatusCodePagesWithReExecute("/home/error/{0}");
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -86,8 +91,11 @@ namespace ProductReview.Mvc
                     context.Context.Response.Headers.Add("Cache-Control", "no-cache, no-store");
                     context.Context.Response.Headers.Add("Expires", "-1");
                 }
-            });
+            });  
 
+
+          
+            
         }
     }
 }

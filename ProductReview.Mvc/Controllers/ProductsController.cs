@@ -16,6 +16,7 @@ namespace ProductReview.Mvc.Controllers
             productService = s1;
         }
 
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Index()
         {
             var list = productService.GetProducts();
