@@ -21,6 +21,7 @@ namespace ProductReview.Mvc.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Index visited at {0}", DateTime.Now.ToLongTimeString());
           //  throw new Exception("error");
             return View();
         }
