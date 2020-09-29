@@ -1,6 +1,7 @@
 ﻿using ProductReview.Application.Interfaces;
 using ProductReview.Application.ViewModels;
 using ProductReview.Domain.Interfaces;
+using ProductReview.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,16 @@ namespace ProductReview.Application.Services
                    { 
                      Name = p.Name, Price = p.Price
                    };
+        }
+
+        public void AddProduct(ProductViewModel p)
+        {
+            Product pr = new Product()
+            {
+                Name = p.Name,
+                Price = p.Price
+            };
+            productsRepository.AddProduct(pr);
         }
     }
 }

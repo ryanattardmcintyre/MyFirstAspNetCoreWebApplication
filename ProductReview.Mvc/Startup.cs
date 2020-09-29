@@ -64,7 +64,7 @@ namespace ProductReview.Mvc
             }
 
             // app.Run(context => { throw new Exception("error"); });
-            app.UseStatusCodePagesWithReExecute("/home/error/{0}");
+            app.UseStatusCodePagesWithReExecute("/Home/error/{0}");
 
 
             app.UseHttpsRedirection();

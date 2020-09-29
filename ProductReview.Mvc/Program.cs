@@ -21,6 +21,6 @@ namespace ProductReview.Mvc
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).ConfigureLogging(logBuilder => { logBuilder.ClearProviders(); logBuilder.AddConsole();   });
+                });//.ConfigureLogging(logBuilder => { logBuilder.ClearProviders(); logBuilder.AddConsole();   });
     }
 }

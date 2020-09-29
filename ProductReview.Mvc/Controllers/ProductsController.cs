@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProductReview.Application.Interfaces;
+using ProductReview.Application.ViewModels;
 
 namespace ProductReview.Mvc.Controllers
 {
@@ -22,6 +23,12 @@ namespace ProductReview.Mvc.Controllers
             var list = productService.GetProducts();
 
             return View(list);
+        }
+
+        public IActionResult Create()
+        {
+            productService.AddProduct(new ProductViewModel() { Name = "test1", Price = 10 });
+            return Content("done");
         }
     }
 }

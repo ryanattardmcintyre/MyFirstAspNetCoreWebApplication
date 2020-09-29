@@ -9,5 +9,6 @@ namespace ProductReview.Application.Interfaces
     public interface IProductsService
     {
         IEnumerable<ProductViewModel> GetProducts();
+        void AddProduct(ProductViewModel p);
     }
 }
