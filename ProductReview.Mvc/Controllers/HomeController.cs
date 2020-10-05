@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,8 +20,13 @@ namespace ProductReview.Mvc.Controllers
             _logger = logger;
         }
 
+       
         public IActionResult Index()
         {
+ 
+         
+
+
             _logger.LogInformation("Index visited at {0}", DateTime.Now.ToLongTimeString());
           //  throw new Exception("error");
             return View();

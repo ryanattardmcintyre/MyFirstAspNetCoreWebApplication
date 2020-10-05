@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductReview.Application.Interfaces;
 using ProductReview.Application.ViewModels;
@@ -25,6 +26,8 @@ namespace ProductReview.Mvc.Controllers
             return View(list);
         }
 
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             productService.AddProduct(new ProductViewModel() { Name = "test1", Price = 10 });
