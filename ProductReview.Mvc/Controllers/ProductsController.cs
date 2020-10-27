@@ -27,11 +27,15 @@ namespace ProductReview.Mvc.Controllers
         }
 
 
-        [Authorize(Roles = "Admin")]
+     //   [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
-            productService.AddProduct(new ProductViewModel() { Name = "test1", Price = 10 });
+            productService.AddProduct(new ProductViewModel() { Name = "test2", Price = 100 });
             return Content("done");
         }
+
+
+
+
     }
 }

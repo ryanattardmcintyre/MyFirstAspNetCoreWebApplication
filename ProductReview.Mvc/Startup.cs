@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using ProductReview.DataAccess.Context;
 using ProductReview.IoC;
 using ProductReview.DataAccess.Repositories;
+using ProductReview.Mvc.Configurations;
 
 namespace ProductReview.Mvc
 {
@@ -42,16 +43,20 @@ namespace ProductReview.Mvc
             
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false
             )
-              .AddDefaultUI()
-                 .AddEntityFrameworkStores<ApplicationDbContext>()
+             .AddDefaultUI() //using default ui in case of access denied else an error is thrown
+             .AddEntityFrameworkStores<ApplicationDbContext>()
                  .AddDefaultTokenProviders();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
+
+            //configuring valitaion on password for identity
             services.Configure<IdentityOptions>(options => { options.Password.RequireUppercase = false; options.Password.RequireNonAlphanumeric = false; options.Password.RequiredLength = 3; });
 
+            services.RegisterAutoMapper();
           
             DependencyContainer.RegisterServices(services);
         }
@@ -91,7 +96,9 @@ namespace ProductReview.Mvc
                 endpoints.MapRazorPages();
             });
 
+             
 
+            //removing caching (of css in particular)
             app.UseStaticFiles(new StaticFileOptions()
             {
                 OnPrepareResponse = context =>

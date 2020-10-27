@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
+using ProductReview.Application.AutoMapper;
 using ProductReview.Application.Interfaces;
 using ProductReview.Application.Services;
 using ProductReview.DataAccess.Repositories;
@@ -21,6 +23,8 @@ namespace ProductReview.IoC
             services.AddScoped<IProductsRepository, ProductsRepository>();
 
             services.AddScoped<IProductsService, ProductsServices>();
+
+          
         }
     }
 }

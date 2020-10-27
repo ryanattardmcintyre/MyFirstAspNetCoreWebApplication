@@ -62,6 +62,11 @@ namespace ProductReview.Mvc.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+
+
+
+
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -78,7 +83,7 @@ namespace ProductReview.Mvc.Areas.Identity.Pages.Account
             {
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
-
+                
               
 
                 if (result.Succeeded)

@@ -11,6 +11,7 @@ namespace ProductReview.Domain.Models
         public string Name { get; set; }
         public double Price { get; set; }
 
+
         public IEnumerable<Review> Reviews {get; set;}
 
     }

@@ -18,6 +18,8 @@ namespace ProductReview.DataAccess.Repositories
 
         ProductReviewDbContext _context;
 
+        //CRUD - Create Read Update Delete
+
         public int AddProduct(Product p)
         {
             _context.Products.Add(p);
@@ -40,5 +42,9 @@ namespace ProductReview.DataAccess.Repositories
         {
             return _context.Products.AsQueryable();
         }
+
+
+
+
     }
 }
