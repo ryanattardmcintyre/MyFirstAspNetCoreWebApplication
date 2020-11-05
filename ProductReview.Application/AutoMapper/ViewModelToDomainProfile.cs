@@ -12,6 +12,7 @@ namespace ProductReview.Application.AutoMapper
         public ViewModelToDomainProfile()
         {
             CreateMap<ProductViewModel, Product>();
+            CreateMap<ReviewViewModel, Review>();
         }
         
     }

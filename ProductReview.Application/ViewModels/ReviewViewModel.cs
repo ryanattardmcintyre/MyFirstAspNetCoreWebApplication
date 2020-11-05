@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProductReview.Domain.Models
+namespace ProductReview.Application.ViewModels
 {
-    public class Review
+    //https://stackoverflow.com/questions/62866379/ef-core-unable-to-insert-new-entry-that-has-a-foreign-key
+    public class ReviewViewModel
     {
         public int Id { get; set; }
         public string Comment { get; set; }
         public double Rate { get; set; }
 
         public string Username { get; set; }
-
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+
+        public ProductViewModel Product { get; set; }
+      
     }
 }

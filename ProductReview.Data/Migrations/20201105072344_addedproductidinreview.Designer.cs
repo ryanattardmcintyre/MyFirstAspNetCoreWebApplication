@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProductReview.DataAccess.Context;
 
 namespace ProductReview.DataAccess.Migrations
 {
     [DbContext(typeof(ProductReviewDbContext))]
-    partial class ProductReviewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201105072344_addedproductidinreview")]
+    partial class addedproductidinreview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,11 @@ namespace ProductReview.Mvc.Controllers
     public class ProductsController : Controller
     {
 
-        IProductsService productService;
-        public ProductsController(IProductsService s1)
+        IProductsService productService; IReviewServices reviewService;
+        public ProductsController(IProductsService s1, IReviewServices s2)
         {
             productService = s1;
+            reviewService = s2;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -35,7 +37,18 @@ namespace ProductReview.Mvc.Controllers
         }
 
 
+        public ActionResult Test()
+        {
+            reviewService.AddReview(new ReviewViewModel()
+            {
+                Comment = "test",
+                ProductId =   1   ,
+                Rate = 5
 
+
+            });
+            return Content("done");
+        }
 
     }
 }
