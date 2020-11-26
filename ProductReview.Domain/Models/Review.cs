@@ -11,8 +11,5 @@ namespace ProductReview.Domain.Models
         public double Rate { get; set; }
 
         public string Username { get; set; }
-
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
     }
 }

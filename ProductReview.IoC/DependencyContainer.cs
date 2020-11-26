@@ -24,10 +24,7 @@ namespace ProductReview.IoC
 
             services.AddScoped<IProductsService, ProductsServices>();
 
-            services.AddScoped<IReviewsRepository, ReviewRepository > ();
-            services.AddScoped<IReviewServices, ReviewServices>();
-
-
+          
         }
     }
 }
