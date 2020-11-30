@@ -16,6 +16,7 @@ using ProductReview.DataAccess.Context;
 using ProductReview.IoC;
 using ProductReview.DataAccess.Repositories;
 using ProductReview.Mvc.Configurations;
+using ProductReview.Mvc.Models;
 
 namespace ProductReview.Mvc
 {
@@ -41,7 +42,7 @@ namespace ProductReview.Mvc
 
 
             
-            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false
             )
              .AddDefaultUI() //using default ui in case of access denied else an error is thrown
              .AddEntityFrameworkStores<ApplicationDbContext>()
